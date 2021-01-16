@@ -2,7 +2,7 @@ import users from './users.js';
 
 const getSortedUniqueSkills = users => {
      return users.flatMap((user) => user.skills )
-      .filter( (a, b, c) => c.indexOf(a) === b )
+      .filter( (item, idx, arr) => arr.indexOf(item) === idx)
         .sort()
 };
 
